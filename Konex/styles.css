@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --fondo: rgb(251, 246, 250);
+    --principal: #FC0E69;
+    --principal_2: #27427F;
+    --nav: #b3b3b3;
+    --destacar: #4e8f88;
+}
+
+* {
+    font-family: 'Public Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0; 
+    vertical-align: baseline;
+}
+
+/*--------ESTILOS GENERALES--------*/
+
+.contenedor{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+body {
+    background-color: var(--fondo);
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 210px;
+}
+
+nav {
+    float: right;
+    margin-top: 45px;
+    
+}
+
+header li {
+    display: inline;
+    float: left;
+    padding: 0 10px 0 10px;
+    padding-bottom: 10%;
+}
+
+header a {
+    color: var(--secundario);
+    padding: 40px 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--destacar);
+    cursor: pointer;
+    color: var(--destacar)
+}  
+
+header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: var(--nav);
+    border-bottom: #b8b8b8 solid 1px;
+}
+
+nav ul {
+    list-style: none; 
+    display: flex; 
+}
+
+nav li {
+    margin-right: 10px; 
+}
+
+
+#logo img{
+    float: left;
+    width: 290px;
+    height: 70px;
+    margin-top: 15px;
+    margin-left: 0;
+}
+
+/*------------TERMINA ESTILOS GENERALES-------------*/
+
+.titulo h1{
+    color: var(--principal);
+    font-size: 85px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 55px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 2px 2px 4px rgba(109, 109, 109, 0.5);
+    color: #FFF; /* Color del texto */
+    text-shadow: 2px 2px 0 var(--principal), 4px 4px 0 var(--principal), 6px 6px 0 #000; /* Sombras */
+    -webkit-text-stroke: 1px #000; /* Borde en relieve para navegadores WebKit */
+    font-weight: bold;
+    color: var(--principal);
+}
+
+#subtitulo {
+    text-align: left;
+    margin-left: 50px;
+    color: var(--principal_2);
+    font-size: 25px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.info-eventos{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    justify-content: space-around;
+}
+
+.info-eventos img{
+    height: 230px;
+    width: 250px;
+}
+
+.info-eventos h5{
+    font-family: 'Inter', sans-serif;
+    margin: 10px;
+    font-size: 15px;
+    color: var(--principal);
+    font-weight: 600;
+}
+.info-eventos h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin: 10px;
+    font-size: 15px;
+    color: var(--principal_2);
+    font-weight: 900;
+}
+
+.line{
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    border-top: 1px solid #000;
+}
+
+.destacar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img-fondo{
+    height: 300px;
+    width: 1100px;
+}
+
+.contenedor {
+    position: relative; /* Posicionamiento relativo para el contenedor */
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boton {
+    position: absolute; /* Posicionamiento absoluto para el botón */
+    top: 75%; /* Alinea el botón en el centro verticalmente */
+    left: 10%; /* Alinea el botón en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el botón correctamente */
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*----------ESTILOS GENERALES FOOOTER--------------*/
+footer{
+    text-align: center;
+    font-size: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--nav);
+    display: flex;
+}
+
+footer div{
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    font-family: 'Inter';
+    font-size: 15px;
+}
+
+#logo-footer img{
+    float: left;
+    width: 200px;
+    height: 50px;
+    margin-top: 15px;
+    margin-left: 0;
+}
+
+.redes{
+    display: flex; 
+    flex-direction: column;  
+}
+
+.redes img{
+    height: 10px;
+    width: 10px;
+    
+}
+
+
+
+/*TERMINA ESTILOS GENERALES FOOOTER*/
