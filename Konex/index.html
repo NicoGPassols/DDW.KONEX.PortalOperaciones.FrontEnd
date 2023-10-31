@@ -18,6 +18,55 @@
     <script>
     </script>
     <link rel="icon" href="img/konexicon.jpeg" type="image/jpeg">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        var current = 0;
+        var imagenes = new Array();
+
+        $(document).ready(function () {
+            var numImages = 6;
+            if (numImages <= 3) {
+                $('.right-arrow').css('display', 'none');
+                $('.left-arrow').css('display', 'none');
+            }
+
+            $('.left-arrow').on('click', function () {
+                if (current > 0) {
+                    current = current - 1;
+                } else {
+                    current = numImages - 3;
+                }
+
+                $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 600);
+
+                return false;
+            });
+
+            $('.left-arrow').on('hover', function () {
+                $(this).css('opacity', '0.5');
+            }, function () {
+                $(this).css('opacity', '1');
+            });
+
+            $('.right-arrow').on('hover', function () {
+                $(this).css('opacity', '0.5');
+            }, function () {
+                $(this).css('opacity', '1');
+            });
+
+            $('.right-arrow').on('click', function () {
+                if (numImages > current + 3) {
+                    current = current + 1;
+                } else {
+                    current = 0;
+                }
+
+                $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 600);
+
+                return false;
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -40,13 +89,30 @@
         <div class="titulo">
             <h1>DESTACADO</h1>
         </div>
-        <div class="destacar">
-            <div class="contenedor">
-                <marquee behavior="scroll" scrollamount="10" direction="left">
-                    <img src="img/lunesbomba.png" id="img-fondo">
-                    <button class="boton">ACCEDER</button>
-                </marquee>
-            </div>
+        <div class="container">
+            <ul class="slider">
+                <li id="slide1">
+                    <img src="img/carrousel.png" />
+                </li>
+                <li id="slide2">
+                    <img src="img/carrousel2.png" />
+                </li>
+                <li id="slide3">
+                    <img src="img/carrousel3.png" />
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    <a href="#slide1">1</a>
+                </li>
+                <li>
+                    <a href="#slide2">2</a>
+                </li>
+                <li>
+                    <a href="#slide3">3</a>
+                </li>
+            </ul>
+
         </div>
     </section>
     <section>
@@ -110,6 +176,7 @@
             <img>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
