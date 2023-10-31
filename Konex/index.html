@@ -52,17 +52,29 @@
             </ul>
             <ul class="menu">
                 <li>
-                    <a href="#slide1">1</a>
+                    <a href="javascript:void(0);" onclick="changeSlide(1)">1</a>
                 </li>
                 <li>
-                    <a href="#slide2">2</a>
+                    <a href="javascript:void(0);" onclick="changeSlide(2)">2</a>
                 </li>
                 <li>
-                    <a href="#slide3">3</a>
+                    <a href="javascript:void(0);" onclick="changeSlide(3)">3</a>
                 </li>
             </ul>
-
         </div>
+        <script>
+            function changeSlide(slideNumber) {
+                // Oculta todas las imágenes
+                var images = document.querySelectorAll('.slider img');
+                for (var i = 0; i < images.length; i++) {
+                    images[i].style.display = 'none';
+                }
+
+                // Muestra la imagen correspondiente al número seleccionado
+                var selectedImage = document.getElementById('slide' + slideNumber).querySelector('img');
+                selectedImage.style.display = 'block';
+            }
+        </script>
     </section>
     <section>
         <div id="subtitulo">
